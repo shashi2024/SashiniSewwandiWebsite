@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Blog & Technical Writings – Essays, tutorials, and research notes from a Research Engineer specializing in AI and ML." />
+  <title>Blog & Writings | Research Engineer Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo"><svg class="logo-svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Sashini Sewwandi</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html"><svg class="nav-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Home</a></li>
+        <li><a href="about.html"><svg class="nav-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> About</a></li>
+        <li><a href="projects.html"><svg class="nav-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Projects</a></li>
+        <li><a href="publications.html"><svg class="nav-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Publications</a></li>
+        <li><a href="blog.html"><svg class="nav-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg> Blog</a></li>
+        <li><a href="contact.html" class="nav-cta"><svg class="nav-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="container">
+      <p class="chapter-label">Chapter V — The Writings</p>
+      <span class="section-tag reveal">Blog & Essays</span>
+      <h1 class="section-title reveal" style="margin-top:0.4rem">Technical Writings</h1>
+      <div class="chapter-divider reveal"><span class="ornament">✦</span></div>
+      <p class="section-subtitle reveal">Tutorials, research essays, opinions, and deep dives into the world of AI and machine learning.</p>
+    </div>
+  </div>
+
+  <section style="padding: 2rem 2rem 6rem;">
+    <div class="container">
+
+      <!-- Search -->
+      <div class="search-wrap reveal">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" class="search-input" id="blog-search" placeholder="Search posts, topics, or keywords…" />
+      </div>
+
+      <div class="blog-layout">
+
+        <!-- ── Main Blog Feed ── -->
+        <main id="blog-feed">
+
+          <!-- Filter row -->
+          <div class="filter-row reveal">
+            <button class="filter-btn active" data-blog-filter="all">All Posts</button>
+            <button class="filter-btn" data-blog-filter="ai">Artificial Inteligance</button>
+            <button class="filter-btn" data-blog-filter="wso2">WSO2</button>
+            <button class="filter-btn" data-blog-filter="programming">Programming</button>
+            <button class="filter-btn" data-blog-filter="research">Research</button>
+            <button class="filter-btn" data-blog-filter="study">Study</button>
+          </div>
+
+          <!-- ── Featured Post (Newest 1) ── -->
+          <div class="card blog-card blog-card-featured reveal" data-blog-cat="wso2" data-blog-text="wso2 api manager digital transformation">
+            <div class="blog-card-inner">
+              <div class="blog-featured-label">✦ Featured Essay</div>
+              <div class="blog-meta">
+                <span class="blog-category cat-tutorial">WSO2 API manager</span>
+                <span class="blog-date">12/07/2026</span>
+              </div>
+              <div class="blog-title">How API Sprawl Slows Down Digital Transformation and How WSO2 API Manager Solves It</div>
+              <p class="blog-excerpt">When organizations dive headfirst into digital transformation, APIs are usually the heroes of the story... Fortunately, WSO2 API Manager acts as the ultimate command center, helping you design, secure, publish, and manage your APIs from a single, organized platform.</p>
+              <div class="blog-tags">
+                <span class="tag">WSO2</span>
+                <span class="tag">API Management</span>
+              </div>
+              <div class="blog-footer">
+                <div class="blog-author">By <strong>Your Name</strong></div>
+                <a href="https://shashisblogs2000.blogspot.com/2026/07/how-api-sprawl-slows-down-digital.html" class="blog-read-link" target="_blank">Read Opinion →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post 2 (Newest 2) -->
+          <div class="card blog-card reveal reveal-delay-1" data-blog-cat="wso2" data-blog-text="wso2 micro integrator legacy systems">
+            <div class="blog-card-inner">
+              <div class="blog-meta">
+                <span class="blog-category cat-tutorial">WSO2 API integrator</span>
+                <span class="blog-date">12/07/2026</span>
+              </div>
+              <div class="blog-title">Modernizing Legacy Systems Without Rewriting Everything Using WSO2 Micro Integrator</div>
+              <p class="blog-excerpt">We’ve all heard the old tech adage, "If it ain't broke, don't fix it."... Instead of ripping out the old foundations, you can build a bridge to the future by integrating your existing systems using WSO2 Micro Integrator.</p>
+              <div class="blog-tags">
+                <span class="tag">WSO2</span>
+                <span class="tag">Integration</span>
+              </div>
+              <div class="blog-footer">
+                <div class="blog-author">By <strong>Your Name</strong></div>
+                <a href="https://shashisblogs2000.blogspot.com/2026/07/modernizing-legacy-systems-without.html" class="blog-read-link" target="_blank">Read Guide →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post 3 (Newest 3) -->
+          <div class="card blog-card reveal reveal-delay-2" data-blog-cat="wso2" data-blog-text="wso2 ai gateway scalable ai integration">
+            <div class="blog-card-inner">
+              <div class="blog-meta">
+                <span class="blog-category cat-tutorial">WSO2 AI gatway</span>
+                <span class="blog-date">12/07/2026</span>
+              </div>
+              <div class="blog-title">How WSO2 AI Gateway Simplifies Secure and Scalable AI Integration for Modern Enterprises</div>
+              <p class="blog-excerpt">Right now, artificial intelligence is moving at absolute warp speed... This is where the WSO2 AI Gateway comes in. Think of it as a smart, secure border checkpoint that sits between your internal apps and external AI models, letting you innovate at full speed without losing control of the wheel.</p>
+              <div class="blog-tags">
+                <span class="tag">WSO2</span>
+                <span class="tag">AI Gateway</span>
+              </div>
+              <div class="blog-footer">
+                <div class="blog-author">By <strong>Your Name</strong></div>
+                <a href="https://shashisblogs2000.blogspot.com/2026/07/how-wso2-ai-gateway-simplifies-secure.html" class="blog-read-link" target="_blank">Read Article →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post 4 -->
+          <div class="card blog-card reveal reveal-delay-1" data-blog-cat="programming" data-blog-text="python java c# programming languages">
+            <div class="blog-card-inner">
+              <div class="blog-meta">
+                <span class="blog-category cat-ml">programming Languages</span>
+                <span class="blog-date">17/07/2024</span>
+              </div>
+              <div class="blog-title">Comparing Python, Java, and C#: Key Differences and Use Cases</div>
+              <p class="blog-excerpt">In the world of programming, selecting the right language can be pivotal to the success of any project. Python, C#, and Java stand out as three of the most widely used and versatile programming languages today. They are not only popular among seasoned developers but also widely taught to beginners due to their accessibility and broad applicability.</p>
+              <div class="blog-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Java</span>
+                <span class="tag">C#</span>
+              </div>
+              <div class="blog-footer">
+                <div class="blog-author">By <strong>Your Name</strong></div>
+                <a href="https://shashisblogs2000.blogspot.com/2024/07/comparing-python-java-and-c-key.html" class="blog-read-link" target="_blank">Read Essay →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post 5 -->
+          <div class="card blog-card reveal reveal-delay-2" data-blog-cat="programming" data-blog-text="python java c# programming languages">
+            <div class="blog-card-inner">
+              <div class="blog-meta">
+                <span class="blog-category cat-ml">programming Languages</span>
+                <span class="blog-date">17/07/2024</span>
+              </div>
+              <div class="blog-title">Comparing Python, Java, and C#: Key Differences and Use Cases</div>
+              <p class="blog-excerpt">Python, known for its simplicity and readability, is favored in fields such as data science, artificial intelligence, and web development. Java, renowned for its platform independence and robustness, dominates in enterprise-level applications, Android development, and large-scale systems. C#, with its roots in Windows development, has expanded its reach into game development, web services, and enterprise applications...</p>
+              <div class="blog-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Java</span>
+                <span class="tag">C#</span>
+              </div>
+              <div class="blog-footer">
+                <div class="blog-author">By <strong>Your Name</strong></div>
+                <a href="https://shashisblogs2000.blogspot.com/2024/07/comparing-python-java-and-c-key.html" class="blog-read-link" target="_blank">Read Article →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post 6 -->
+          <div class="card blog-card reveal reveal-delay-1" data-blog-cat="study" data-blog-text="stress mindfulness calm">
+            <div class="blog-card-inner">
+              <div class="blog-meta">
+                <span class="blog-category cat-opinion">Mindfulness</span>
+                <span class="blog-date">10/07/2024</span>
+              </div>
+              <div class="blog-title">Staying Calm: How Stress Can Be Managed with Mindfulness</div>
+              <p class="blog-excerpt">Feeling overwhelmed by stress? You're not alone. Stress is a natural part of life, but learning how to manage it effectively can transform your well-being. In this blog post, I'll share my personal journey with stress and how mindfulness has become a powerful tool in my life...</p>
+              <div class="blog-tags">
+                <span class="tag">Balance Working</span>
+                <span class="tag">Growth Mindset</span>
+                <span class="tag">Stress Management</span>
+                <span class="tag">Time Management</span>
+              </div>
+              <div class="blog-footer">
+                <div class="blog-author">By <strong>Your Name</strong></div>
+                <a href="https://shashisblogs2000.blogspot.com/2024/07/staying-calm-how-stress-can-be-managed.html" class="blog-read-link" target="_blank">Read Article →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post 7 -->
+          <div class="card blog-card reveal reveal-delay-2" data-blog-cat="programming" data-blog-text="asp.net mvc dynamic web applications">
+            <div class="blog-card-inner">
+              <div class="blog-meta">
+                <span class="blog-category cat-tutorial">ASP.Net (Programming Languages)</span>
+                <span class="blog-date">29/06/2024</span>
+              </div>
+              <div class="blog-title">Exploring ASP.NET MVC: Crafting Dynamic Web Applications</div>
+              <p class="blog-excerpt">ASP.NET MVC is a comprehensive framework by Microsoft for building interactive, data-centric web applications. It employs the Model-View-Controller (MVC) pattern, a design architecture that separates an application into three distinct sections: model, view, and controller. This separation promotes cleaner code organization and simplifies maintenance.</p>
+              <div class="blog-tags">
+                <span class="tag">ASP.NET</span>
+                <span class="tag">MVC</span>
+              </div>
+              <div class="blog-footer">
+                <div class="blog-author">By <strong>Your Name</strong></div>
+                <a href="https://shashisblogs2000.blogspot.com/2024/06/exploring-aspnet-mvc-crafting-dynamic.html" class="blog-read-link" target="_blank">Read Guide →</a>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- No results message -->
+          <div id="blog-no-results" style="display:none; text-align:center; padding:3rem; color:var(--text-muted); font-family:var(--font-serif); font-style:italic;">
+            No posts found matching your search.
+          </div>
+
+        </main><!-- /blog-feed -->
+
+        <!-- ── Blog Sidebar ── -->
+        <aside class="blog-sidebar">
+
+          <!-- About the author -->
+          <div class="card sidebar-card reveal">
+            <div class="sidebar-title">✍️ The Author</div>
+            <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem;">
+              <div style="width:52px;height:52px;border-radius:50%;background:var(--gradient-glow);display:flex;align-items:center;justify-content:center;font-size:1.5rem;border:1px solid var(--border-color);flex-shrink:0;"><img src="images/photo.jpg" alt="My Photo"></div>
+              <div>
+                <div style="font-weight:700; font-size:0.95rem;">Your Name</div>
+                <div style="font-size:0.75rem; color:var(--text-muted); font-family:var(--font-mono);">Research Engineer · AI/ML</div>
+              </div>
+            </div>
+            <p style="font-size:0.82rem; color:var(--text-secondary); line-height:1.7; font-family:var(--font-serif); font-style:italic;">
+              Writing about AI research, practical ML engineering, and the intersection of technology and science.
+            </p>
+          </div>
+
+          <!-- Categories filter -->
+          <div class="card sidebar-card reveal reveal-delay-1">
+            <div class="sidebar-title">📂 Categories</div>
+            <div class="category-filter">
+              <button class="cat-filter-btn active" data-cat="all">
+                All Posts <span class="cat-filter-count">7</span>
+              </button>
+              <button class="cat-filter-btn" data-cat="ai">
+                Artificial Inteligance <span class="cat-filter-count">0</span>
+              </button>
+              <button class="cat-filter-btn" data-cat="wso2">
+                WSO2 <span class="cat-filter-count">3</span>
+              </button>
+              <button class="cat-filter-btn" data-cat="programming">
+                Programming <span class="cat-filter-count">3</span>
+              </button>
+              <button class="cat-filter-btn" data-cat="research">
+                Research <span class="cat-filter-count">0</span>
+              </button>
+              <button class="cat-filter-btn" data-cat="study">
+                Study <span class="cat-filter-count">1</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Popular posts -->
+          <div class="card sidebar-card reveal reveal-delay-2">
+            <div class="sidebar-title">🔥 Popular Posts</div>
+            <div class="sidebar-post-item">
+              <div class="sidebar-post-title">Deploying FastAPI ML Models on AWS EC2</div>
+              <div class="sidebar-post-date">April 28, 2024 · 12 min</div>
+            </div>
+            <div class="sidebar-post-item">
+              <div class="sidebar-post-title">Why CNN-LSTM Still Beats Transformers for Audio</div>
+              <div class="sidebar-post-date">May 15, 2024 · 8 min</div>
+            </div>
+            <div class="sidebar-post-item">
+              <div class="sidebar-post-title">Flutter + FastAPI End-to-End Guide</div>
+              <div class="sidebar-post-date">December 5, 2023 · 9 min</div>
+            </div>
+            <div class="sidebar-post-item">
+              <div class="sidebar-post-title">Understanding Mel-Spectrograms</div>
+              <div class="sidebar-post-date">March 14, 2024 · 6 min</div>
+            </div>
+          </div>
+
+          <!-- Tags cloud -->
+          <div class="card sidebar-card reveal reveal-delay-3">
+            <div class="sidebar-title">🏷️ Popular Tags</div>
+            <div class="pub-keyword-cloud">
+              <span class="pub-keyword">Audio AI</span>
+              <span class="pub-keyword">Python</span>
+              <span class="pub-keyword">FastAPI</span>
+              <span class="pub-keyword">AWS</span>
+              <span class="pub-keyword">Docker</span>
+              <span class="pub-keyword">Transformers</span>
+              <span class="pub-keyword">Flutter</span>
+              <span class="pub-keyword">CNN-LSTM</span>
+              <span class="pub-keyword">MLOps</span>
+              <span class="pub-keyword">Privacy</span>
+              <span class="pub-keyword">NLP</span>
+              <span class="pub-keyword">OpenCV</span>
+            </div>
+          </div>
+
+          <!-- Newsletter CTA -->
+          <div class="card sidebar-card reveal reveal-delay-4" style="background: var(--gradient-book); text-align:center;">
+            <div style="font-size:1.8rem; margin-bottom:0.6rem;">📬</div>
+            <div style="font-family:var(--font-serif); font-weight:700; margin-bottom:0.4rem; font-size:1rem;">New post alerts</div>
+            <p style="font-size:0.8rem; color:var(--text-secondary); margin-bottom:1rem; font-style:italic; line-height:1.6;">Get notified when I publish new essays and tutorials.</p>
+            <input type="email" placeholder="your@email.com" style="width:100%;padding:0.7rem 0.9rem;background:rgba(201,168,76,0.06);border:1px solid var(--border-color);border-radius:4px;color:var(--text-primary);font-size:0.85rem;outline:none;margin-bottom:0.75rem;font-family:var(--font-sans);" />
+            <button class="btn btn-primary" style="width:100%;justify-content:center;font-size:0.85rem;" id="subscribe-btn">Subscribe</button>
+          </div>
+
+        </aside>
+
+      </div><!-- /blog-layout -->
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo"><svg class="logo-svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Sashini Sewwandi</div>
+      <p class="footer-copy">© 2024 Research Engineer Portfolio. All rights reserved.</p>
+      <nav class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="publications.html">Publications</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

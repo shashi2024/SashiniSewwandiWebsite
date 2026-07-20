@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Publications – Peer-reviewed journal articles, conference papers, and technical writings by Research Engineer." />
+  <title>Publications | Research Engineer Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo"><svg class="logo-svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Sashini Sewwandi</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html"><svg class="nav-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Home</a></li>
+        <li><a href="about.html"><svg class="nav-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> About</a></li>
+        <li><a href="projects.html"><svg class="nav-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Projects</a></li>
+        <li><a href="publications.html"><svg class="nav-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Publications</a></li>
+        <li><a href="blog.html"><svg class="nav-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg> Blog</a></li>
+        <li><a href="contact.html" class="nav-cta"><svg class="nav-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="container">
+      <p class="chapter-label">Chapter IV — The Scholarship</p>
+      <span class="section-tag reveal">Research Output</span>
+      <h1 class="section-title reveal" style="margin-top:0.4rem">Publications</h1>
+      <div class="chapter-divider reveal"><span class="ornament">✦</span></div>
+      <p class="section-subtitle reveal">Peer-reviewed articles, conference papers, preprints, and book chapters.</p>
+    </div>
+  </div>
+
+  <section style="padding: 2rem 2rem 6rem;">
+    <div class="container">
+
+      <!-- Search + Filter -->
+      <div class="search-wrap reveal">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" class="search-input" id="pub-search" placeholder="Search by title, author, or keyword…" />
+      </div>
+
+      <div class="filter-row reveal">
+        <button class="filter-btn active" data-pub-filter="all">All</button>
+        <button class="filter-btn" data-pub-filter="journal">Journal Articles</button>
+        <button class="filter-btn" data-pub-filter="conference">Conference Papers</button>
+        <button class="filter-btn" data-pub-filter="preprint">Preprints</button>
+        <button class="filter-btn" data-pub-filter="book">Book Chapters</button>
+      </div>
+
+      <!-- Two-column layout: main list + sidebar -->
+      <div class="publications-layout">
+
+        <!-- ── Main Publication List ── -->
+        <div class="publications-main" id="pub-list">
+
+          <!-- 2024 -->
+          <div class="pub-year-header reveal" data-year="2025" style="margin-bottom:1.5rem; margin-top:0.5rem;">
+            <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--accent-gold); letter-spacing:3px; text-transform:uppercase;">— 2024 —</span>
+          </div>
+
+          <div class="card pub-card reveal reveal-delay-1" data-pub-type="journal" data-pub-text="hybrid cnn-lstm audio deepfake detection ieee 2024">
+            <span class="pub-type pub-type-journal">Conference</span>
+            <a href="#" class="pub-title">AI Powered Depression Monitoring System for Sinhala and Tamil Users</a>
+            <div class="pub-authors"><strong>Author - Sashini Sithara</strong>, Co-Author - Pasindu Sandeep, Jayani Srimali, Amasha Wijesinghe</div>
+            <div class="pub-venue">IEEE Transactions on Audio, Speech, and Language Processing <span>· Vol. 32, 2024</span></div>
+            <p class="pub-abstract">This paper proposes a novel hybrid architecture combining convolutional and recurrent neural networks for detecting AI-synthesized audio in real-time telephony environments. Our model achieves 97.3% accuracy on the ASVspoof2021 benchmark with a latency of under 80ms per inference, making it suitable for live call screening. We further introduce a novel multi-scale spectrogram fusion technique that captures both micro and macro temporal patterns in audio signals.</p>
+            <div class="pub-links">
+              <a href="#" class="pub-link primary">
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                PDF
+              </a>
+              <a href="#" class="pub-link">DOI</a>
+              <a href="#" class="pub-link">arXiv</a>
+              <a href="#" class="pub-link">Code</a>
+            </div>
+          </div>
+
+          <!-- <div class="card pub-card reveal reveal-delay-2" data-pub-type="conference" data-pub-text="biofeedback emotion recognition mental health neurips 2024">
+            <span class="pub-type pub-type-conf">Conference Paper</span>
+            <a href="#" class="pub-title">Biofeedback-Driven Emotion Recognition: A Multimodal Approach for Mental Health Monitoring</a>
+            <div class="pub-authors"><strong>Your Name</strong>, Priya Sharma</div>
+            <div class="pub-venue">ICASSP 2024 – IEEE International Conference on Acoustics, Speech and Signal Processing <span>· Seoul, 2024</span></div>
+            <p class="pub-abstract">We present a multimodal pipeline that fuses facial expression features extracted via a lightweight CNN with prosodic speech features to infer emotional states. Applied to a dataset of 1,200 therapy sessions, our approach outperforms unimodal baselines by 14.2% in F1 score...</p>
+            <div class="pub-links">
+              <a href="#" class="pub-link primary">PDF</a>
+              <a href="#" class="pub-link">Slides</a>
+              <a href="#" class="pub-link">Poster</a>
+            </div>
+          </div> -->
+
+          <!-- 2023 -->
+          <!-- <div class="pub-year-header reveal" data-year="2023" style="margin-bottom:1.5rem; margin-top:2rem;">
+            <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--accent-gold); letter-spacing:3px; text-transform:uppercase;">— 2023 —</span>
+          </div> -->
+
+          <!-- <div class="card pub-card reveal reveal-delay-1" data-pub-type="journal" data-pub-text="yolov8 multi-object tracking real-time computer vision 2023">
+            <span class="pub-type pub-type-journal">Journal Article</span>
+            <a href="#" class="pub-title">Efficient Multi-Object Tracking with YOLOv8 and Adaptive Kalman Filtering in Resource-Constrained Environments</a>
+            <div class="pub-authors"><strong>Your Name</strong>, Rahul Verma, Sneha Patel</div>
+            <div class="pub-venue">Pattern Recognition Letters <span>· Vol. 174, 2023</span></div>
+            <p class="pub-abstract">A lightweight tracking system that combines YOLOv8 with an adaptive Kalman filter optimized for embedded GPU hardware. Our approach maintains 94.1% MOTA on MOT17 while operating at 45 FPS on an NVIDIA Jetson Nano, enabling deployment in real-world surveillance and robotics applications...</p>
+            <div class="pub-links">
+              <a href="#" class="pub-link primary">PDF</a>
+              <a href="#" class="pub-link">DOI</a>
+              <a href="#" class="pub-link">Dataset</a>
+            </div>
+          </div> -->
+
+          <!-- <div class="card pub-card reveal reveal-delay-2" data-pub-type="conference" data-pub-text="transformer nlp sentiment analysis conference 2023">
+            <span class="pub-type pub-type-conf">Conference Paper</span>
+            <a href="#" class="pub-title">Domain-Adapted Transformers for Low-Resource Sentiment Analysis in Medical Dialogue</a>
+            <div class="pub-authors"><strong>Your Name</strong>, Aditya Kumar</div>
+            <div class="pub-venue">ACL 2023 – Findings of the Association for Computational Linguistics <span>· Toronto, 2023</span></div>
+            <p class="pub-abstract">Fine-tuning large language models on medical dialogue requires careful domain adaptation. We propose a curriculum learning strategy that progressively exposes a BERT-based model to increasingly domain-specific clinical text, achieving state-of-the-art results on MedSentiment-v2...</p>
+            <div class="pub-links">
+              <a href="#" class="pub-link primary">PDF</a>
+              <a href="#" class="pub-link">ACL Anthology</a>
+              <a href="#" class="pub-link">Code</a>
+            </div>
+          </div> -->
+
+          <!-- <div class="card pub-card reveal reveal-delay-3" data-pub-type="preprint" data-pub-text="audio synthesis detection preprint arxiv 2023">
+            <span class="pub-type pub-type-preprint">Preprint</span>
+            <a href="#" class="pub-title">WaveGuard++: Enhanced Watermarking for AI-Generated Speech Detection</a>
+            <div class="pub-authors"><strong>Your Name</strong>, Meera Nair, Sanjay Iyer</div>
+            <div class="pub-venue">arXiv <span>· arXiv:2312.04891 · 2023</span></div>
+            <p class="pub-abstract">We extend the WaveGuard framework with a learnable watermarking layer that is robust to common audio post-processing attacks including compression, pitch shifting, and additive noise. Under review at INTERSPEECH 2024...</p>
+            <div class="pub-links">
+              <a href="#" class="pub-link primary">arXiv PDF</a>
+              <a href="#" class="pub-link">Abstract</a>
+            </div>
+          </div> -->
+
+          <!-- 2022 -->
+          <!-- <div class="pub-year-header reveal" data-year="2022" style="margin-bottom:1.5rem; margin-top:2rem;">
+            <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--accent-gold); letter-spacing:3px; text-transform:uppercase;">— 2022 —</span>
+          </div> -->
+
+          <!-- <div class="card pub-card reveal reveal-delay-1" data-pub-type="book" data-pub-text="deep learning medical imaging book chapter 2022">
+            <span class="pub-type pub-type-book">Book Chapter</span>
+            <a href="#" class="pub-title">Deep Learning Approaches for Medical Image Segmentation: A Practical Overview</a>
+            <div class="pub-authors"><strong>Your Name</strong></div>
+            <div class="pub-venue">Advances in Biomedical Informatics, Springer <span>· Chapter 7, 2022</span></div>
+            <p class="pub-abstract">A comprehensive chapter covering U-Net variants, attention mechanisms, and semi-supervised techniques for organ and lesion segmentation in CT and MRI scans. Includes reproducible PyTorch implementations for five benchmark architectures...</p>
+            <div class="pub-links">
+              <a href="#" class="pub-link primary">Publisher Page</a>
+              <a href="#" class="pub-link">Preprint</a>
+            </div>
+          </div> -->
+
+          <!-- <div class="card pub-card reveal reveal-delay-2" data-pub-type="journal" data-pub-text="federated learning privacy healthcare journal 2022">
+            <span class="pub-type pub-type-journal">Journal Article</span>
+            <a href="#" class="pub-title">Privacy-Preserving Federated Learning for Mental Health Data: Challenges and Solutions</a>
+            <div class="pub-authors"><strong>Your Name</strong>, Lakshmi Prasad, Arjun Singh</div>
+            <div class="pub-venue">Journal of Biomedical Informatics <span>· Vol. 130, 2022</span></div>
+            <p class="pub-abstract">Federated learning enables collaborative model training without sharing raw patient data. This study evaluates five FL frameworks across three mental health datasets, measuring differential privacy trade-offs against model utility...</p>
+            <div class="pub-links">
+              <a href="#" class="pub-link primary">PDF</a>
+              <a href="#" class="pub-link">DOI</a>
+            </div>
+          </div> -->
+
+        </div><!-- /pub-list -->
+
+        <!-- ── Publications Sidebar ── -->
+        <aside class="publications-sidebar">
+
+          <!-- Stats -->
+          <div class="card pub-sidebar-card reveal">
+            <div class="pub-sidebar-title">📚 Research Metrics</div>
+            <div class="pub-stat-row">
+              <span class="pub-stat-label">Total Papers</span>
+              <span class="pub-stat-value">1</span>
+            </div>
+            <div class="pub-stat-row">
+              <span class="pub-stat-label">Journal Articles</span>
+              <span class="pub-stat-value">0</span>
+            </div>
+            <div class="pub-stat-row">
+              <span class="pub-stat-label">Conference Papers</span>
+              <span class="pub-stat-value">1</span>
+            </div>
+            <div class="pub-stat-row">
+              <span class="pub-stat-label">Preprints</span>
+              <span class="pub-stat-value">1</span>
+            </div>
+            <div class="pub-stat-row">
+              <span class="pub-stat-label">Book Chapters</span>
+              <span class="pub-stat-value">0</span>
+            </div>
+            <!-- <div class="pub-stat-row">
+              <span class="pub-stat-label">Total Citations</span>
+              <span class="pub-stat-value">0</span>
+            </div>
+            <div class="pub-stat-row">
+              <span class="pub-stat-label">h-index</span>
+              <span class="pub-stat-value">8</span>
+            </div>
+            <div class="pub-stat-row">
+              <span class="pub-stat-label">i10-index</span>
+              <span class="pub-stat-value">5</span>
+            </div>
+          </div> -->
+
+          <!-- External Profiles -->
+          <!-- <div class="card pub-sidebar-card reveal reveal-delay-1">
+            <div class="pub-sidebar-title">🔗 Academic Profiles</div>
+            <div style="display:flex; flex-direction:column; gap:0.6rem;">
+              <a href="#" class="pub-link" style="justify-content:flex-start; border-color:rgba(201,168,76,0.15);">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Google Scholar
+              </a>
+              <a href="#" class="pub-link" style="justify-content:flex-start; border-color:rgba(201,168,76,0.15);">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                ResearchGate
+              </a>
+              <a href="#" class="pub-link" style="justify-content:flex-start; border-color:rgba(201,168,76,0.15);">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                ORCID
+              </a>
+              <a href="#" class="pub-link" style="justify-content:flex-start; border-color:rgba(201,168,76,0.15);">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Semantic Scholar
+              </a>
+            </div>
+          </div> -->
+
+          <!-- Research Keywords -->
+          <div class="card pub-sidebar-card reveal reveal-delay-2">
+            <div class="pub-sidebar-title">🏷️ Research Areas</div>
+            <div class="pub-keyword-cloud">
+              <span class="pub-keyword">Audio AI</span>
+              <span class="pub-keyword">Deepfake Detection</span>
+              <span class="pub-keyword">Computer Vision</span>
+              <span class="pub-keyword">NLP</span>
+              <span class="pub-keyword">CNN-LSTM</span>
+              <span class="pub-keyword">Transformers</span>
+              <span class="pub-keyword">Federated Learning</span>
+              <span class="pub-keyword">Medical Imaging</span>
+              <span class="pub-keyword">Mental Health AI</span>
+              <span class="pub-keyword">MLOps</span>
+              <span class="pub-keyword">Speech Processing</span>
+              <span class="pub-keyword">Biometrics</span>
+            </div>
+          </div>
+
+          <!-- Download CV -->
+          <div class="card pub-sidebar-card reveal reveal-delay-3" style="text-align:center; background: var(--gradient-book);">
+            <div style="font-size:2rem; margin-bottom:0.75rem;">📄</div>
+            <div style="font-family:var(--font-serif); font-weight:700; margin-bottom:0.4rem;">Download Full CV</div>
+            <p style="font-size:0.82rem; color:var(--text-secondary); margin-bottom:1rem; font-style:italic;">Includes full publication list, awards, and service record.</p>
+            <a href="https://shashi2024.github.io/CV/" class="btn btn-primary" style="width:100%; justify-content:center; font-size:0.85rem;" id="download-cv-btn">
+              Download CV (PDF)
+            </a>
+          </div>
+
+        </aside>
+
+      </div><!-- /publications-layout -->
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo"><svg class="logo-svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Sashini Sewwandi</div>
+      <p class="footer-copy">© 2024 Research Engineer Portfolio. All rights reserved.</p>
+      <nav class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="publications.html">Publications</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
