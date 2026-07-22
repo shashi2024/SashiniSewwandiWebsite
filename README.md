@@ -1,59 +1,16 @@
-# Static Website – Research Engineer Portfolio
+# React + Vite
 
-A clean, modern, fully static HTML/CSS/JS portfolio website with no dependencies or build step required.
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-## Folder Structure
+Currently, two official plugins are available:
 
-```
-static-website/
-├── index.html          ← Home page
-├── about.html          ← About / Experience page
-├── projects.html       ← All projects with filter
-├── contact.html        ← Contact form + social links
-├── .gitignore
-├── README.md
-└── assets/
-    ├── css/
-    │   ├── style.css       ← Design system, components, animations
-    │   └── responsive.css  ← Mobile / tablet breakpoints
-    └── js/
-        └── main.js         ← Nav, typing effect, scroll reveal, form
-```
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## How to Run
+## React Compiler
 
-### Option 1 – Just open the file (simplest)
-Double-click `index.html` — it opens directly in your browser. No server needed.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-### Option 2 – VS Code Live Server (recommended)
-1. Install the **Live Server** extension in VS Code
-2. Right-click `index.html` → **Open with Live Server**
-3. Auto-reloads on save ✅
+## Expanding the Oxlint configuration
 
-### Option 3 – Python HTTP Server
-```bash
-cd static-website
-python -m http.server 3000
-```
-Then open http://localhost:3000
-
-### Option 4 – Node serve
-```bash
-npx serve static-website
-```
-
-## Features
-- 🌙 Dark theme with glassmorphism cards
-- ✨ Scroll reveal animations
-- ⌨️ Typing effect on homepage
-- 📊 Animated skill bars & counters
-- 🔍 Project category filter
-- 📱 Fully responsive (mobile, tablet, desktop)
-- 📬 Contact form with success state
-- ♿ Semantic HTML & accessible IDs
-
-## Customisation
-- Edit personal info in each `.html` file
-- Swap emoji avatars for real images via `<img>` tags
-- Update social links in `contact.html`
-- Add/remove projects in `projects.html`
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
