@@ -40,7 +40,7 @@ export default function BlogCard({ blog, delayClass = "" }) {
             ))}
           </div>
           <div className="blog-footer">
-            <div className="blog-author">By <strong>Your Name</strong></div>
+            <div className="blog-author">By <strong>Sashini Sewwandi</strong></div>
             <a href={blog.url} className="blog-read-link" target="_blank" rel="noopener noreferrer">
               {blog.readLinkText || 'Read Article →'}
             </a>
