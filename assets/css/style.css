@@ -111,14 +111,19 @@ body::after {
   align-items: center;
   padding: 0 2rem;
   transition: var(--transition);
+  /* Always dark semi-transparent — visible on all pages including hero */
+  background: rgba(3, 20, 14, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(10, 106, 71, 0.12);
 }
 
 .navbar.scrolled {
-  background: rgba(3, 36, 24, 0.92);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  background: rgba(3, 20, 14, 0.96);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
   border-bottom: 1px solid var(--border-color);
-  box-shadow: 0 1px 30px rgba(0,0,0,0.5);
+  box-shadow: 0 2px 36px rgba(0,0,0,0.6);
 }
 
 .nav-container {
@@ -301,10 +306,10 @@ body::after {
 
 .hero-title {
   font-family: var(--font-serif);
-  font-size: clamp(3rem, 7vw, 6rem);
+  font-size: clamp(2rem, 6vw, 6rem);
   font-weight: 800;
-  line-height: 1.05;
-  letter-spacing: -1px;
+  line-height: 1.08;
+  letter-spacing: -0.5px;
   margin-bottom: 1.2rem;
   animation: fadeInUp 0.8s ease 0.1s both;
 }
