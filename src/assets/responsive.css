@@ -297,3 +297,21 @@
     padding: 0.65rem 1rem;
   }
 }
+
+/* ── Global overflow guard — never allow horizontal scroll ── */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+section,
+.hero,
+.navbar,
+.container {
+  max-width: 100%;
+}
+
+/* Prevent any image or embed from busting layout */
+img, video, iframe, embed, object {
+  max-width: 100%;
+}
