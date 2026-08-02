@@ -8,6 +8,7 @@ import BlogCard from '../components/BlogCard';
 import { personalProjects } from '../data/projects';
 import { publicationsData } from '../data/publications';
 import { blogsData } from '../data/blogs';
+import { experienceData } from '../data/experience';
 
 // Custom hook for numeric stats counting
 function useCounter(target, duration = 1500) {
@@ -66,7 +67,6 @@ export default function Home() {
       }
 
       if (!isDeleting && text === fullText) {
-        // Wait before deleting
         setTimeout(() => setIsDeleting(true), 1500);
       } else if (isDeleting && text === '') {
         setIsDeleting(false);
@@ -78,16 +78,13 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, [text, isDeleting, loopNum, typingSpeed]);
 
-  // Stats Counters
-  const countPapers = useCounter(12);
-  const countExp = useCounter(5);
   const countProjects = useCounter(20);
-  const countCitations = useCounter(850);
 
-  // Top items for preview
-  const featuredProjects = personalProjects.slice(0, 3);
-  const recentPubs = publicationsData.slice(0, 1);
-  const topBlogs = blogsData.slice(0, 3);
+  // 1 Example per section for clean, mobile-friendly scannability
+  const topExp = experienceData[0]; // 1 Experience example
+  const featuredProj = personalProjects[0]; // 1 Featured Project example
+  const recentPub = publicationsData[0]; // 1 Publication example
+  const latestBlog = blogsData[0]; // 1 Blog example
 
   return (
     <div>
@@ -113,31 +110,19 @@ export default function Home() {
           </p>
 
           <div className="hero-actions">
-            <Link to="/projects" className="btn btn-primary" id="hero-view-projects">
-              <svg width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/>
-                <polyline points="13 2 13 9 20 9"/>
-              </svg>
-              View Projects
-            </Link>
-            <Link to="/publications" className="btn btn-outline" id="hero-publications">
-              <svg width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-              </svg>
-              Publications
-            </Link>
-            <Link to="/about" className="btn btn-outline" id="hero-about-me">About Me</Link>
+            <Link to="/about" className="btn btn-primary" id="hero-about-me">About Me</Link>
+            <Link to="/experience" className="btn btn-outline" id="hero-experience">Experience</Link>
+            <Link to="/projects" className="btn btn-outline" id="hero-view-projects">Projects</Link>
           </div>
 
           <div className="hero-stats">
             <div className="stat-item">
               <div className="stat-number">1</div>
-              <div className="stat-label">Research Papers</div>
+              <div className="stat-label">Research Paper</div>
             </div>
             <div className="stat-divider"></div>
             <div className="stat-item">
-              <div className="stat-number">4 yrs</div>
+              <div className="stat-number">4+ yrs</div>
               <div className="stat-label">Experience</div>
             </div>
             <div className="stat-divider"></div>
@@ -145,146 +130,177 @@ export default function Home() {
               <div className="stat-number">{countProjects}+</div>
               <div className="stat-label">Projects Built</div>
             </div>
-            <div className="stat-divider"></div>
-            {/* <div className="stat-item">
-              <div className="stat-number">{countCitations}+</div>
-              <div className="stat-label">Citations</div>
-            </div> */}
           </div>
         </div>
       </section>
 
-      {/* ═══ SKILLS ═══ */}
-      <section id="skills" style={{ background: 'var(--bg-secondary)' }}>
+      {/* ═══ SECTION 1: ABOUT ME (1 Spotlight Summary) ═══ */}
+      <section style={{ padding: '4rem 2rem', background: 'var(--bg-secondary)' }}>
         <div className="container">
           <SectionHeader 
             chapter="Chapter II" 
-            title="Core Skill Areas" 
-            subtitle="Specialized in research-driven AI development across multiple domains."
+            title="About Me" 
+            subtitle="Passionate Research Engineer creating reliable AI & software systems."
           />
 
-          <div className="skills-grid">
-            <ScrollReveal className="card skill-card" delayClass="reveal-delay-1">
-              <div className="skill-icon">🧠</div>
-              <div className="skill-name">Machine Learning</div>
-              <p class="skill-desc">Designing and training supervised, unsupervised, and reinforcement learning models for real-world applications.</p>
-              <div className="skill-bar-bg"><div className="skill-bar-fill" style={{ width: '92%' }}></div></div>
-            </ScrollReveal>
-
-            <ScrollReveal className="card skill-card" delayClass="reveal-delay-2">
-              <div className="skill-icon">👁️</div>
-              <div className="skill-name">Computer Vision</div>
-              <p class="skill-desc">Object detection, image segmentation, and visual feature extraction using CNNs and vision transformers.</p>
-              <div className="skill-bar-bg"><div className="skill-bar-fill" style={{ width: '88%' }}></div></div>
-            </ScrollReveal>
-
-            <ScrollReveal className="card skill-card" delayClass="reveal-delay-3">
-              <div className="skill-icon">🗣️</div>
-              <div className="skill-name">Natural Language Processing</div>
-              <p class="skill-desc">Transformer-based models for text classification, sentiment analysis, and language generation tasks.</p>
-              <div className="skill-bar-bg"><div className="skill-bar-fill" style={{ width: '80%' }}></div></div>
-            </ScrollReveal>
-
-            <ScrollReveal className="card skill-card" delayClass="reveal-delay-4">
-              <div className="skill-icon">🔊</div>
-              <div className="skill-name">Audio & Speech AI</div>
-              <p class="skill-desc">CNN-LSTM hybrid architectures for audio classification, fake call detection, and speech processing.</p>
-              <div className="skill-bar-bg"><div className="skill-bar-fill" style={{ width: '85%' }}></div></div>
-            </ScrollReveal>
-
-            <ScrollReveal className="card skill-card" delayClass="reveal-delay-1">
-              <div className="skill-icon">☁️</div>
-              <div className="skill-name">MLOps & Cloud</div>
-              <p class="skill-desc">Deploying ML pipelines on AWS, building REST APIs with FastAPI, and managing containerized services.</p>
-              <div className="skill-bar-bg"><div className="skill-bar-fill" style={{ width: '75%' }}></div></div>
-            </ScrollReveal>
-
-            <ScrollReveal className="card skill-card" delayClass="reveal-delay-2">
-              <div className="skill-icon">📊</div>
-              <div className="skill-name">Data Science</div>
-              <p class="skill-desc">Exploratory data analysis, feature engineering, statistical modeling, and data visualization with Python.</p>
-              <div className="skill-bar-bg"><div className="skill-bar-fill" style={{ width: '90%' }}></div></div>
-            </ScrollReveal>
-          </div>
+          <ScrollReveal className="card" style={{ padding: '2rem', marginTop: '2rem', maxWidth: '850px', margin: '2rem auto 0' }}>
+            <div style={{ display: 'flex', gap: '2rem', alignItems: 'center', flexWrap: 'wrap' }}>
+              <div style={{ flexShrink: 0, margin: '0 auto' }}>
+                <img 
+                  src="/images/photo.jpg" 
+                  alt="Sashini Sewwandi" 
+                  style={{ width: '110px', height: '110px', borderRadius: '50%', objectFit: 'cover', border: '2px solid var(--accent-gold)' }} 
+                />
+              </div>
+              <div style={{ flex: 1, minWidth: '260px' }}>
+                <h3 style={{ fontSize: '1.3rem', marginBottom: '0.5rem' }}>
+                  Sashini Sewwandi — <span className="gradient-text">Research & QA Engineer</span>
+                </h3>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.92rem', lineHeight: '1.7', marginBottom: '1.2rem' }}>
+                  Specializing in machine learning, computer vision, audio AI, and quality assurance. Dedicated to building accessible, ethical, and high-impact technology.
+                </p>
+                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', alignItems: 'center' }}>
+                  <span style={{ fontSize: '0.8rem', color: 'var(--accent-teal-light)', background: 'rgba(10, 106, 71, 0.15)', padding: '0.3rem 0.75rem', borderRadius: '20px', fontWeight: '500' }}>
+                    ● Open to Collaborations & Roles
+                  </span>
+                  <Link to="/about" style={{ color: 'var(--accent-gold)', fontSize: '0.88rem', fontWeight: '600', textDecoration: 'none' }}>
+                    Read Full Bio →
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
-      {/* ═══ FEATURED PROJECTS ═══ */}
-      <section id="featured-projects">
+      {/* ═══ SECTION 2: EXPERIENCE (1 Spotlight Role) ═══ */}
+      <section style={{ padding: '4rem 2rem' }}>
         <div className="container">
           <SectionHeader 
             chapter="Chapter III" 
-            title="Featured Projects" 
-            subtitle="A selection of research and engineering projects I've built."
+            title="Work Experience" 
+            subtitle="Highlights from software quality engineering and business operations."
           />
 
-          <div className="projects-grid">
-            {featuredProjects.map((project, idx) => (
-              <ProjectCard 
-                key={idx} 
-                project={project} 
-                delayClass={`reveal-delay-${idx + 1}`}
-              />
-            ))}
-          </div>
+          <ScrollReveal className="timeline" style={{ marginTop: '2rem', maxWidth: '850px', margin: '2rem auto 0' }}>
+            <div className="timeline-item">
+              <div className="timeline-dot"></div>
+              <div className="timeline-period">{topExp.period}</div>
+              <div className="timeline-role">{topExp.role}</div>
+              <div className="timeline-org">{topExp.org}</div>
+              <p className="timeline-desc">{topExp.desc}</p>
+            </div>
+          </ScrollReveal>
 
-          <ScrollReveal style={{ textAlign: 'center', marginTop: '3rem' }}>
-            <Link to="/projects" className="btn btn-outline" id="all-projects-btn">View All Projects →</Link>
+          <ScrollReveal style={{ textAlign: 'center', marginTop: '2.5rem' }}>
+            <Link to="/experience" className="btn btn-outline" id="all-exp-btn">
+              View Full Experience Timeline →
+            </Link>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* ═══ RECENT PUBLICATIONS PREVIEW ═══ */}
-      <section style={{ background: 'var(--bg-secondary)' }}>
+      {/* ═══ SECTION 3: CORE SKILLS (Overview Grid) ═══ */}
+      <section style={{ padding: '4rem 2rem', background: 'var(--bg-secondary)' }}>
         <div className="container">
           <SectionHeader 
             chapter="Chapter IV" 
-            title="Recent Publications" 
-            subtitle="Peer-reviewed research contributions and technical writings."
+            title="Skill Domains" 
+            subtitle="Core technical strengths across AI research and engineering."
           />
 
-          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-            {recentPubs.map((pub, idx) => (
-              <PubCard 
-                key={idx} 
-                pub={pub} 
-                delayClass={`reveal-delay-${idx + 1}`}
-              />
-            ))}
-          </div>
+          <div className="skills-grid" style={{ marginTop: '2rem' }}>
+            <ScrollReveal className="card skill-card">
+              <div className="skill-icon">🧠</div>
+              <div className="skill-name">Machine Learning</div>
+              <p className="skill-desc">Supervised/unsupervised models, PyTorch, TensorFlow & scikit-learn.</p>
+            </ScrollReveal>
 
-          <ScrollReveal style={{ textAlign: 'center', marginTop: '2.5rem' }}>
-            <Link to="/publications" className="btn btn-outline" id="all-pubs-btn">All Publications →</Link>
-          </ScrollReveal>
+            <ScrollReveal className="card skill-card">
+              <div className="skill-icon">👁️</div>
+              <div className="skill-name">Computer Vision & Audio AI</div>
+              <p className="skill-desc">CNNs, vision transformers, Librosa, OpenCV & audio fake call detection.</p>
+            </ScrollReveal>
+
+            <ScrollReveal className="card skill-card">
+              <div className="skill-icon">🧪</div>
+              <div className="skill-name">QA & Test Automation</div>
+              <p className="skill-desc">Automated testing, JMeter load testing, API testing, and UAT.</p>
+            </ScrollReveal>
+
+            <ScrollReveal className="card skill-card">
+              <div className="skill-icon">☁️</div>
+              <div className="skill-name">Deployment & Tools</div>
+              <p className="skill-desc">FastAPI, Docker, AWS S3/EC2, Git, Python, Dart & JavaScript.</p>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
 
-      {/* ═══ LATEST FROM BLOG ═══ */}
-      <section>
+      {/* ═══ SECTION 4: FEATURED PROJECT (1 Spotlight Project) ═══ */}
+      <section style={{ padding: '4rem 2rem' }}>
         <div className="container">
           <SectionHeader 
             chapter="Chapter V" 
-            title="From the Blog" 
-            subtitle="Technical writings, research notes, and reflections."
+            title="Featured Project" 
+            subtitle="Highlighting key engineering and research innovations."
           />
 
-          <div className="projects-grid">
-            {topBlogs.map((blog, idx) => (
-              <BlogCard 
-                key={idx} 
-                blog={blog} 
-                delayClass={`reveal-delay-${idx + 1}`}
-              />
-            ))}
+          <div style={{ maxWidth: '850px', margin: '2rem auto 0' }}>
+            <ProjectCard project={featuredProj} delayClass="reveal" />
           </div>
 
-          <ScrollReveal style={{ textAlign: 'center', marginTop: '3rem' }}>
-            <Link to="/blog" className="btn btn-outline" id="all-blogs-btn">All Posts & Writings →</Link>
+          <ScrollReveal style={{ textAlign: 'center', marginTop: '2.5rem' }}>
+            <Link to="/projects" className="btn btn-outline" id="all-projects-btn">
+              View All Projects →
+            </Link>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* ═══ CTA BANNER ═══ */}
+      {/* ═══ SECTION 5: PUBLICATIONS (1 Spotlight Paper) ═══ */}
+      <section style={{ padding: '4rem 2rem', background: 'var(--bg-secondary)' }}>
+        <div className="container">
+          <SectionHeader 
+            chapter="Chapter VI" 
+            title="Research Publication" 
+            subtitle="Peer-reviewed scientific contributions."
+          />
+
+          <div style={{ maxWidth: '850px', margin: '2rem auto 0' }}>
+            <PubCard pub={recentPub} delayClass="reveal" />
+          </div>
+
+          <ScrollReveal style={{ textAlign: 'center', marginTop: '2.5rem' }}>
+            <Link to="/publications" className="btn btn-outline" id="all-pubs-btn">
+              All Publications →
+            </Link>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ═══ SECTION 6: BLOG (1 Spotlight Article) ═══ */}
+      <section style={{ padding: '4rem 2rem' }}>
+        <div className="container">
+          <SectionHeader 
+            chapter="Chapter VII" 
+            title="Featured Article" 
+            subtitle="Technical writings, research essays, and thoughts on AI."
+          />
+
+          <div style={{ maxWidth: '850px', margin: '2rem auto 0' }}>
+            <BlogCard blog={latestBlog} delayClass="reveal" />
+          </div>
+
+          <ScrollReveal style={{ textAlign: 'center', marginTop: '2.5rem' }}>
+            <Link to="/blog" className="btn btn-outline" id="all-blogs-btn">
+              Read All Articles →
+            </Link>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ═══ SECTION 7: CTA BANNER ═══ */}
       <section style={{ background: 'var(--bg-secondary)', padding: '5rem 2rem' }}>
         <div className="container">
           <ScrollReveal className="cta-card-upgraded">
@@ -293,7 +309,7 @@ export default function Home() {
               Let's Write the Next<br/><span className="gradient-text">Chapter Together</span>
             </h2>
             <p className="cta-desc">
-              Open to research collaborations, freelance AI projects, and full-time research engineering roles.
+              Open to research collaborations, freelance AI projects, and full-time engineering roles.
             </p>
             <Link to="/contact" className="btn btn-primary btn-cta-glow" id="cta-contact-btn">
               Get In Touch 

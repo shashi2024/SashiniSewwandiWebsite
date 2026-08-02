@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -15,8 +15,9 @@
     <div class="nav-container">
       <a href="index.html" class="nav-logo"><svg class="logo-svg-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Sashini Sewwandi</a>
       <ul class="nav-links" id="nav-links">
-        <li><a href="index.html"><svg class="nav-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Home</a></li>
+        <li><a href="index.html" class="active"><svg class="nav-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Home</a></li>
         <li><a href="about.html"><svg class="nav-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> About</a></li>
+        <li><a href="experience.html"><svg class="nav-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> Experience</a></li>
         <li><a href="projects.html"><svg class="nav-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Projects</a></li>
         <li><a href="publications.html"><svg class="nav-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Publications</a></li>
         <li><a href="blog.html"><svg class="nav-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg> Blog</a></li>
@@ -50,109 +51,139 @@
       </p>
 
       <div class="hero-actions">
-        <a href="projects.html" class="btn btn-primary" id="hero-view-projects">
-          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
-          View Projects
-        </a>
-        <a href="publications.html" class="btn btn-outline" id="hero-publications">
-          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-          Publications
-        </a>
-        <a href="about.html" class="btn btn-outline" id="hero-about-me">About Me</a>
+        <a href="about.html" class="btn btn-primary" id="hero-about-me">About Me</a>
+        <a href="experience.html" class="btn btn-outline" id="hero-experience">Experience</a>
+        <a href="projects.html" class="btn btn-outline" id="hero-view-projects">Projects</a>
       </div>
 
       <div class="hero-stats">
         <div class="stat-item">
-          <div class="stat-number" data-count="12" data-suffix="+">0+</div>
-          <div class="stat-label">Research Papers</div>
+          <div class="stat-number">1</div>
+          <div class="stat-label">Research Paper</div>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
-          <div class="stat-number" data-count="5" data-suffix="yrs">0yrs</div>
+          <div class="stat-number">4+ yrs</div>
           <div class="stat-label">Experience</div>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
-          <div class="stat-number" data-count="20" data-suffix="+">0+</div>
+          <div class="stat-number">20+</div>
           <div class="stat-label">Projects Built</div>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <div class="stat-number" data-count="850" data-suffix="+">0+</div>
-          <div class="stat-label">Citations</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══ SKILLS ═══ -->
-  <section id="skills" style="background: var(--bg-secondary);">
+  <!-- ═══ SECTION 1: ABOUT PREVIEW (1 Spotlight Card) ═══ -->
+  <section style="padding: 4rem 2rem; background: var(--bg-secondary);">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-tag">Chapter II</span>
-        <h2 class="section-title">Core Skill Areas</h2>
+        <h2 class="section-title">About Me</h2>
         <div class="chapter-divider"><span class="ornament">✦</span></div>
-        <p class="section-subtitle">Specialized in research-driven AI development across multiple domains.</p>
+        <p class="section-subtitle">Passionate Research Engineer creating reliable AI & software systems.</p>
       </div>
 
-      <div class="skills-grid">
-        <div class="card skill-card reveal reveal-delay-1">
-          <div class="skill-icon">🧠</div>
-          <div class="skill-name">Machine Learning</div>
-          <p class="skill-desc">Designing and training supervised, unsupervised, and reinforcement learning models for real-world applications.</p>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="92%"></div></div>
-        </div>
-
-        <div class="card skill-card reveal reveal-delay-2">
-          <div class="skill-icon">👁️</div>
-          <div class="skill-name">Computer Vision</div>
-          <p class="skill-desc">Object detection, image segmentation, and visual feature extraction using CNNs and vision transformers.</p>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="88%"></div></div>
-        </div>
-
-        <div class="card skill-card reveal reveal-delay-3">
-          <div class="skill-icon">🗣️</div>
-          <div class="skill-name">Natural Language Processing</div>
-          <p class="skill-desc">Transformer-based models for text classification, sentiment analysis, and language generation tasks.</p>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80%"></div></div>
-        </div>
-
-        <div class="card skill-card reveal reveal-delay-4">
-          <div class="skill-icon">🔊</div>
-          <div class="skill-name">Audio & Speech AI</div>
-          <p class="skill-desc">CNN-LSTM hybrid architectures for audio classification, fake call detection, and speech processing.</p>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="85%"></div></div>
-        </div>
-
-        <div class="card skill-card reveal reveal-delay-1">
-          <div class="skill-icon">☁️</div>
-          <div class="skill-name">MLOps & Cloud</div>
-          <p class="skill-desc">Deploying ML pipelines on AWS, building REST APIs with FastAPI, and managing containerized services.</p>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="75%"></div></div>
-        </div>
-
-        <div class="card skill-card reveal reveal-delay-2">
-          <div class="skill-icon">📊</div>
-          <div class="skill-name">Data Science</div>
-          <p class="skill-desc">Exploratory data analysis, feature engineering, statistical modeling, and data visualization with Python.</p>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="90%"></div></div>
+      <div class="card reveal" style="padding: 2rem; margin-top: 2rem; max-width: 850px; margin: 2rem auto 0;">
+        <div style="display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;">
+          <div style="flex-shrink: 0; margin: 0 auto;">
+            <img src="images/photo.jpg" alt="Sashini Sewwandi" style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-gold);" />
+          </div>
+          <div style="flex: 1; min-width: 260px;">
+            <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">
+              Sashini Sewwandi — <span class="gradient-text">Research & QA Engineer</span>
+            </h3>
+            <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.7; margin-bottom: 1.2rem;">
+              Specializing in machine learning, computer vision, audio AI, and quality assurance. Dedicated to building accessible, ethical, and high-impact technology.
+            </p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+              <span style="font-size: 0.8rem; color: var(--accent-teal-light); background: rgba(10, 106, 71, 0.15); padding: 0.3rem 0.75rem; border-radius: 20px; font-weight: 500;">
+                ● Open to Collaborations & Roles
+              </span>
+              <a href="about.html" style="color: var(--accent-gold); font-size: 0.88rem; font-weight: 600; text-decoration: none;">
+                Read Full Bio →
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══ FEATURED PROJECTS ═══ -->
-  <section id="featured-projects">
+  <!-- ═══ SECTION 2: EXPERIENCE (1 Spotlight Role) ═══ -->
+  <section style="padding: 4rem 2rem;">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-tag">Chapter III</span>
-        <h2 class="section-title">Featured Projects</h2>
+        <h2 class="section-title">Work Experience</h2>
         <div class="chapter-divider"><span class="ornament">✦</span></div>
-        <p class="section-subtitle">A selection of research and engineering projects I've built.</p>
+        <p class="section-subtitle">Highlights from software quality engineering and business operations.</p>
       </div>
 
-      <div class="projects-grid">
-        <div class="card project-card reveal reveal-delay-1">
+      <div class="timeline reveal" style="margin-top: 2rem; max-width: 850px; margin: 2rem auto 0;">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-period">January, 2025 – Present</div>
+          <div class="timeline-role">Associate Quality Assurance Engineer</div>
+          <div class="timeline-org">Zincat Technology Pvt Ltd</div>
+          <p class="timeline-desc">As an Associate Quality Assurance Engineer, I contributed to delivering reliable and high-quality software solutions through manual and automated testing practices. I implemented automated tests to improve efficiency and test coverage while conducting load and performance testing using JMeter to evaluate system stability and responsiveness.</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2.5rem;" class="reveal">
+        <a href="experience.html" class="btn btn-outline" id="all-exp-btn">View Full Experience Timeline →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SECTION 3: SKILLS OVERVIEW ═══ -->
+  <section style="padding: 4rem 2rem; background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Chapter IV</span>
+        <h2 class="section-title">Skill Domains</h2>
+        <div class="chapter-divider"><span class="ornament">✦</span></div>
+        <p class="section-subtitle">Core technical strengths across AI research and engineering.</p>
+      </div>
+
+      <div class="skills-grid" style="margin-top: 2rem;">
+        <div class="card skill-card reveal reveal-delay-1">
+          <div class="skill-icon">🧠</div>
+          <div class="skill-name">Machine Learning</div>
+          <p class="skill-desc">Supervised/unsupervised models, PyTorch, TensorFlow & scikit-learn.</p>
+        </div>
+        <div class="card skill-card reveal reveal-delay-2">
+          <div class="skill-icon">👁️</div>
+          <div class="skill-name">Computer Vision & Audio AI</div>
+          <p class="skill-desc">CNNs, vision transformers, Librosa, OpenCV & audio fake call detection.</p>
+        </div>
+        <div class="card skill-card reveal reveal-delay-3">
+          <div class="skill-icon">🧪</div>
+          <div class="skill-name">QA & Test Automation</div>
+          <p class="skill-desc">Automated testing, JMeter load testing, API testing, and UAT.</p>
+        </div>
+        <div class="card skill-card reveal reveal-delay-4">
+          <div class="skill-icon">☁️</div>
+          <div class="skill-name">Deployment & Tools</div>
+          <p class="skill-desc">FastAPI, Docker, AWS S3/EC2, Git, Python, Dart & JavaScript.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SECTION 4: FEATURED PROJECT (1 Spotlight Project) ═══ -->
+  <section style="padding: 4rem 2rem;">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Chapter V</span>
+        <h2 class="section-title">Featured Project</h2>
+        <div class="chapter-divider"><span class="ornament">✦</span></div>
+        <p class="section-subtitle">Highlighting key engineering and research innovations.</p>
+      </div>
+
+      <div style="max-width: 850px; margin: 2rem auto 0;">
+        <div class="card project-card reveal">
           <span class="project-badge badge-research">Research</span>
           <h3 class="project-title">Mental Health Application</h3>
           <p class="project-desc">A SMART SINHALA APP FOR DEPRESSION MONITORING AND MENTAL HEALTH SUPPORT USING AI. Successfully published and presented a research paper at the CICN Conference.</p>
@@ -168,89 +199,55 @@
             </a>
           </div>
         </div>
-
-        <div class="card project-card reveal reveal-delay-2">
-          <span class="project-badge badge-ml">ML</span>
-          <h3 class="project-title">Air Quality Predictor</h3>
-          <p class="project-desc">A Machine Learning Algorithm designed to predict air quality effectively and inform environmental decisions.</p>
-          <div class="project-tags">
-            <span class="tag">Machine Learning</span>
-            <span class="tag">Python</span>
-          </div>
-          <div class="project-links">
-            <a href="projects.html" class="project-link">
-              <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              View Details
-            </a>
-          </div>
-        </div>
-
-        <div class="card project-card reveal reveal-delay-3">
-          <span class="project-badge badge-cv">Deep Learning</span>
-          <h3 class="project-title">Earthquake Predictor</h3>
-          <p class="project-desc">A Deep Neural Network Algorithm for Seismic-GNN-Prediction built to analyze structural and geographical patterns.</p>
-          <div class="project-tags">
-            <span class="tag">DNN</span>
-            <span class="tag">Python</span>
-            <span class="tag">GNN</span>
-          </div>
-          <div class="project-links">
-            <a href="projects.html" class="project-link">
-              <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              View Details
-            </a>
-          </div>
-        </div>
       </div>
 
-      <div style="text-align:center; margin-top: 3rem;" class="reveal">
+      <div style="text-align: center; margin-top: 2.5rem;" class="reveal">
         <a href="projects.html" class="btn btn-outline" id="all-projects-btn">View All Projects →</a>
       </div>
     </div>
   </section>
 
-  <!-- ═══ RECENT PUBLICATIONS PREVIEW ═══ -->
-  <section style="background: var(--bg-secondary);">
+  <!-- ═══ SECTION 5: PUBLICATIONS (1 Spotlight Paper) ═══ -->
+  <section style="padding: 4rem 2rem; background: var(--bg-secondary);">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">Chapter IV</span>
-        <h2 class="section-title">Recent Publications</h2>
+        <span class="section-tag">Chapter VI</span>
+        <h2 class="section-title">Research Publication</h2>
         <div class="chapter-divider"><span class="ornament">✦</span></div>
-        <p class="section-subtitle">Peer-reviewed research contributions and technical writings.</p>
+        <p class="section-subtitle">Peer-reviewed scientific contributions.</p>
       </div>
 
-      <div style="max-width: 800px; margin: 0 auto;">
-        <div class="card pub-card reveal reveal-delay-1">
+      <div style="max-width: 850px; margin: 2rem auto 0;">
+        <div class="card pub-card reveal">
           <span class="pub-type pub-type-conf">Conference</span>
           <div class="pub-title">AI Powered Depression Monitoring System for Sinhala and Tamil Users</div>
-          <div class="pub-authors"><strong>Author - Sashini Sithara</strong>, Co-Author - Pasindu Sandeep, Jayani Srimali, Amasha Wijesinghe</div>
+          <div class="pub-authors"><strong>Author - Sashini Sithara</strong>, Pasindu Sandeep, Jayani Srimali, Amasha Wijesinghe</div>
           <div class="pub-venue">CICN Conference <span>· 2024</span></div>
-          <p class="pub-abstract">This paper proposes a novel architecture combining intelligent models for detecting AI-synthesized indicators in real-time environments. Our model achieves high accuracy on the benchmark, making it suitable for live monitoring. We further introduce a novel fusion technique that captures both micro and macro temporal patterns.</p>
+          <p class="pub-abstract">This paper proposes a novel architecture combining intelligent models for detecting AI-synthesized indicators in real-time environments.</p>
           <div class="pub-links">
-            <a href="#" class="pub-link primary">PDF</a>
-            <a href="#" class="pub-link">DOI</a>
+            <a href="publications.html" class="pub-link primary">PDF / DOI</a>
           </div>
         </div>
       </div>
 
-      <div style="text-align:center; margin-top:2.5rem;" class="reveal">
+      <div style="text-align: center; margin-top: 2.5rem;" class="reveal">
         <a href="publications.html" class="btn btn-outline" id="all-pubs-btn">All Publications →</a>
       </div>
     </div>
   </section>
 
-  <!-- ═══ LATEST FROM BLOG ═══ -->
-  <section>
+  <!-- ═══ SECTION 6: BLOG (1 Spotlight Article) ═══ -->
+  <section style="padding: 4rem 2rem;">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">Chapter V</span>
-        <h2 class="section-title">From the Blog</h2>
+        <span class="section-tag">Chapter VII</span>
+        <h2 class="section-title">Featured Article</h2>
         <div class="chapter-divider"><span class="ornament">✦</span></div>
-        <p class="section-subtitle">Technical writings, research notes, and reflections.</p>
+        <p class="section-subtitle">Technical writings, research essays, and thoughts on AI.</p>
       </div>
 
-      <div class="projects-grid">
-        <div class="card blog-card blog-card-featured reveal reveal-delay-1">
+      <div style="max-width: 850px; margin: 2rem auto 0;">
+        <div class="card blog-card blog-card-featured reveal">
           <div class="blog-card-inner">
             <div class="blog-featured-label">✦ Featured Post</div>
             <div class="blog-meta">
@@ -259,48 +256,22 @@
               <span class="blog-read-time">6 min read</span>
             </div>
             <div class="blog-title">How API Sprawl Slows Down Digital Transformation and How WSO2 API Manager Solves It</div>
-            <p class="blog-excerpt">When organizations dive headfirst into digital transformation, APIs are usually the heroes of the story... Fortunately, WSO2 API Manager acts as the ultimate command center, helping you design, secure, publish, and manage your APIs.</p>
+            <p class="blog-excerpt">When organizations dive headfirst into digital transformation, APIs are usually the heroes of the story... Fortunately, WSO2 API Manager acts as the ultimate command center.</p>
             <a href="blog.html" class="blog-read-link">Read Essay →</a>
-          </div>
-        </div>
-
-        <div class="card blog-card reveal reveal-delay-2">
-          <div class="blog-card-inner">
-            <div class="blog-meta">
-              <span class="blog-category cat-tutorial">WSO2</span>
-              <span class="blog-date">12/07/2026</span>
-              <span class="blog-read-time">5 min read</span>
-            </div>
-            <div class="blog-title">Modernizing Legacy Systems Without Rewriting Everything Using WSO2 Micro Integrator</div>
-            <p class="blog-excerpt">We’ve all heard the old tech adage, "If it ain't broke, don't fix it."... Instead of ripping out the old foundations, you can build a bridge to the future by integrating your existing systems.</p>
-            <a href="blog.html" class="blog-read-link">Read Guide →</a>
-          </div>
-        </div>
-
-        <div class="card blog-card reveal reveal-delay-3">
-          <div class="blog-card-inner">
-            <div class="blog-meta">
-              <span class="blog-category cat-ml">WSO2</span>
-              <span class="blog-date">12/07/2026</span>
-              <span class="blog-read-time">7 min read</span>
-            </div>
-            <div class="blog-title">How WSO2 AI Gateway Simplifies Secure and Scalable AI Integration for Modern Enterprises</div>
-            <p class="blog-excerpt">Right now, artificial intelligence is moving at absolute warp speed... This is where the WSO2 AI Gateway comes in. Think of it as a smart, secure border checkpoint that sits between your internal apps and external AI models.</p>
-            <a href="blog.html" class="blog-read-link">Read Article →</a>
           </div>
         </div>
       </div>
 
-      <div style="text-align:center; margin-top:3rem;" class="reveal">
-        <a href="blog.html" class="btn btn-outline" id="all-blogs-btn">All Posts & Writings →</a>
+      <div style="text-align: center; margin-top: 2.5rem;" class="reveal">
+        <a href="blog.html" class="btn btn-outline" id="all-blogs-btn">Read All Articles →</a>
       </div>
     </div>
   </section>
 
-  <!-- ═══ CTA BANNER ═══ -->
+  <!-- ═══ SECTION 7: CTA BANNER ═══ -->
   <section style="background: var(--bg-secondary); padding: 5rem 2rem;">
     <div class="container">
-      <div class="card reveal" style="padding: 3.5rem 2rem; text-align:center; background: var(--gradient-book);">
+      <div class="card reveal" style="padding: 3.5rem 2rem; text-align:center; background: var(--gradient-book); max-width:850px; margin:0 auto;">
         <p style="font-family:var(--font-mono); font-size:0.7rem; letter-spacing:3px; color:var(--text-muted); text-transform:uppercase; margin-bottom:1rem;">Epilogue</p>
         <h2 style="font-family:var(--font-serif); font-size: clamp(1.8rem,3vw,2.8rem); font-weight:800; letter-spacing:-0.5px; margin-bottom:1rem;">
           Let's Write the Next<br><span class="gradient-text">Chapter Together</span>
@@ -321,6 +292,7 @@
       <nav class="footer-links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
+        <a href="experience.html">Experience</a>
         <a href="projects.html">Projects</a>
         <a href="publications.html">Publications</a>
         <a href="blog.html">Blog</a>

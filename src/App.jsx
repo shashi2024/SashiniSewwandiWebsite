@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
+import Experience from './pages/Experience';
 import Projects from './pages/Projects';
 import Publications from './pages/Publications';
 import Blog from './pages/Blog';
@@ -30,6 +31,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/experience" element={<Experience />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/publications" element={<Publications />} />
             <Route path="/blog" element={<Blog />} />
@@ -37,6 +39,7 @@ export default function App() {
             {/* Catch-all for HTML extension links */}
             <Route path="/index.html" element={<Home />} />
             <Route path="/about.html" element={<About />} />
+            <Route path="/experience.html" element={<Experience />} />
             <Route path="/projects.html" element={<Projects />} />
             <Route path="/publications.html" element={<Publications />} />
             <Route path="/blog.html" element={<Blog />} />
