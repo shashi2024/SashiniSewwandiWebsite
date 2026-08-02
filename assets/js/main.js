@@ -125,20 +125,80 @@ document.addEventListener('DOMContentLoaded', () => {
     counters.forEach(el => counterObserver.observe(el));
   }
 
+  // ─── Copy Email Functionality ─────────────────
+  const copyEmailBtn = document.getElementById('copy-email-btn');
+  if (copyEmailBtn) {
+    copyEmailBtn.addEventListener('click', () => {
+      const email = 'sashinisithara20@gmail.com';
+      navigator.clipboard.writeText(email).then(() => {
+        copyEmailBtn.classList.add('copied');
+        const span = copyEmailBtn.querySelector('span');
+        if (span) span.textContent = 'Copied! ✓';
+        setTimeout(() => {
+          copyEmailBtn.classList.remove('copied');
+          if (span) span.textContent = 'Copy';
+        }, 2000);
+      }).catch(err => {
+        console.error('Failed to copy email:', err);
+      });
+    });
+  }
+
   // ─── Contact Form ────────────────────────────
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn  = contactForm.querySelector('[type="submit"]');
-      const succ = document.querySelector('.form-success');
+      const succ = document.getElementById('form-success') || document.querySelector('.form-success');
+      const origText = btn.innerHTML;
       btn.textContent = 'Sending…';
       btn.disabled = true;
-      setTimeout(() => {
+
+      const nameVal = document.getElementById('name')?.value || '';
+      const emailVal = document.getElementById('email')?.value || '';
+      const subjectVal = document.getElementById('subject')?.value || '';
+      const messageVal = document.getElementById('message')?.value || '';
+
+      try {
+        const response = await fetch('https://formsubmit.co/ajax/sashinisithara20@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            name: nameVal,
+            email: emailVal,
+            _subject: subjectVal || `Portfolio Contact from ${nameVal}`,
+            message: messageVal
+          })
+        });
+
+        if (response.ok) {
+          contactForm.reset();
+          btn.style.display = 'none';
+          if (succ) {
+            succ.innerHTML = '✅ Message sent! I\'ll get back to you within 24 hours.';
+            succ.style.display = 'block';
+          }
+        } else {
+          throw new Error('FormSubmit response not ok');
+        }
+      } catch (err) {
+        // Fallback to mailto if API request fails
+        const mailtoSubject = encodeURIComponent(subjectVal || `Portfolio Inquiry from ${nameVal}`);
+        const mailtoBody = encodeURIComponent(`Name: ${nameVal}\nEmail: ${emailVal}\n\nMessage:\n${messageVal}`);
+        window.location.href = `mailto:sashinisithara20@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+        
         contactForm.reset();
-        btn.style.display = 'none';
-        if (succ) succ.style.display = 'block';
-      }, 1500);
+        btn.innerHTML = origText;
+        btn.disabled = false;
+        if (succ) {
+          succ.innerHTML = '📬 Opening your email client to send message! You can also email directly to <a href="mailto:sashinisithara20@gmail.com" style="color:var(--accent-teal-light); text-decoration:underline;">sashinisithara20@gmail.com</a>';
+          succ.style.display = 'block';
+        }
+      }
     });
   }
 

@@ -8,19 +8,62 @@ export default function Contact() {
     subject: '',
     message: ''
   });
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState({ sending: false, success: false, message: '' });
+  const [copied, setCopied] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText('sashinisithara20@gmail.com').then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (formData.name && formData.email && formData.message) {
-      setSubmitted(true);
+    if (!formData.name || !formData.email || !formData.message) return;
+
+    setStatus({ sending: true, success: false, message: 'Sending message…' });
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/sashinisithara20@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          _subject: formData.subject || `Portfolio Inquiry from ${formData.name}`,
+          message: formData.message
+        })
+      });
+
+      if (response.ok) {
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setStatus({
+          sending: false,
+          success: true,
+          message: "✅ Message sent! I'll get back to you within 24 hours."
+        });
+      } else {
+        throw new Error('FormSubmit error');
+      }
+    } catch (err) {
+      // Fallback to mailto
       const subject = encodeURIComponent(formData.subject || `Portfolio Inquiry from ${formData.name}`);
       const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
       window.location.href = `mailto:sashinisithara20@gmail.com?subject=${subject}&body=${body}`;
+      
+      setStatus({
+        sending: false,
+        success: true,
+        message: '📬 Opening your email client to send message! You can also email directly to sashinisithara20@gmail.com'
+      });
     }
   };
 
@@ -61,6 +104,15 @@ export default function Contact() {
                     sashinisithara20@gmail.com
                   </a>
                 </div>
+                <button 
+                  type="button" 
+                  className={`copy-email-btn ${copied ? 'copied' : ''}`}
+                  onClick={handleCopyEmail}
+                  title="Copy email address"
+                >
+                  <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  <span>{copied ? 'Copied! ✓' : 'Copy'}</span>
+                </button>
               </div>
 
               <div className="contact-item">
@@ -75,7 +127,9 @@ export default function Contact() {
                 <div className="contact-icon">📱</div>
                 <div className="contact-item-text">
                   <div className="label">Mobile Number</div>
-                  <div className="value">+94 769981690</div>
+                  <a href="tel:+94769981690" className="value" style={{ color: 'var(--text-primary)' }}>
+                    +94 769981690
+                  </a>
                 </div>
               </div>
 
@@ -154,18 +208,29 @@ export default function Contact() {
                     required
                   ></textarea>
                 </div>
-                <button type="submit" className="btn btn-primary" id="submit-form" style={{ width: '100%', justifyContent: 'center' }}>
-                  Send Message
-                  <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <line x1="22" y1="2" x2="11" y2="13"/>
-                    <polygon points="22 2 15 22 11 13 2 9 22 2"/>
-                  </svg>
+                <button 
+                  type="submit" 
+                  className="btn btn-primary" 
+                  id="submit-form" 
+                  disabled={status.sending}
+                  style={{ width: '100%', justifyContent: 'center' }}
+                >
+                  {status.sending ? 'Sending…' : 'Send Message'}
+                  {!status.sending && (
+                    <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                      <line x1="22" y1="2" x2="11" y2="13"/>
+                      <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                    </svg>
+                  )}
                 </button>
-                {submitted && (
+                {status.message && (
                   <div className="form-success" style={{ display: 'block', marginTop: '1rem' }}>
-                    ✅ Message sent! I'll get back to you within 24 hours.
+                    {status.message}
                   </div>
                 )}
+                <div style={{ textAlign: 'center', marginTop: '1.2rem', fontSize: '0.8rem', color: 'var(--text-muted)' }}>
+                  Direct mail: <a href="mailto:sashinisithara20@gmail.com" style={{ color: 'var(--accent-teal-light)', textDecoration: 'underline' }}>sashinisithara20@gmail.com</a>
+                </div>
               </form>
             </ScrollReveal>
 
